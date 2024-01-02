@@ -8,12 +8,17 @@ from sqlmodel import SQLModel, Field, create_engine, Session, Relationship
 from typing import Optional
 
 
+class CRUD:
 
+    def create(self):
 
 class User(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     name: str
     # user_info: Optional["UserInfo"] = Field(default=None, foreign_key="user.id")
+    def create(self, engine: Session) -> bool:
+        with Session()
+
 
 
 class UserInfo(SQLModel, table=True):
