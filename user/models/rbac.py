@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time    :  2024/1/2 16:49
-@Author  :  Zhao Wanpeng
+@Author  :  zhaowanpeng
 @Desc    :  None
 """
 from user.models.base import IntIDBaseModel
