@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 @Time    :  2024/1/2 15:44
-@Author  :  Zhao Wanpeng
-@Desc    :  None
+@Author  :  zhaowanpeng
+@Desc    :  方便开发的基础模型
 """
-
-
 from sqlmodel import SQLModel, Field, Column, TIMESTAMP
 from typing import Optional
 from datetime import datetime

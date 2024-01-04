@@ -1,0 +1,24 @@
+FastAPI学习记录
+
+1. cookie 、 header
+
+2. 依赖项， 路径依赖项
+
+3. 用户认证
+
+
+form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
+form_data: OAuth2PasswordRequestForm = Depends()
+
+
+
+
+current_user: Annotated[User, Depends(get_current_active_user)]
+current_user: User = Depends(get_current_active_user)
+
+
+
+current_user: Annotated[User, Security(get_current_user, scopes=["me"])]
+
+
+security_scopes: SecurityScopes, token: Annotated[str, Depends(oauth2_scheme)]
