@@ -121,7 +121,7 @@ if __name__ == '__main__':
     key = secrets.token_urlsafe()
     j = JWT(private_key=key,public_key=key,access_expiration=1,refresh_expiration=60*1)
     info = {
-        "user": "zwp"
+        "usermodule": "zwp"
     }
     access_token1, refresh_token1 = j.create_token_pair(info)
     import time

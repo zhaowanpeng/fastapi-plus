@@ -9,13 +9,13 @@ from fastapi.security import (
     OAuth2PasswordBearer,
     OAuth2PasswordRequestForm
 )
-from user.models.user import User
+from usermodule.models.user import User
 
 token_router = APIRouter()
 
 @token_router.post("/token")
 async def create_token(form_data: OAuth2PasswordRequestForm = Depends()):
 
-    User.
+    # User.
 
     return {}

@@ -4,10 +4,10 @@
 @Author  :  zhaowanpeng
 @Desc    :  最简单的rbac结构
 """
-from user.models.base import IntIDBaseModel
+from usermodule.models.base import IntIDBaseModel
 from sqlmodel import SQLModel, Field
 from typing import Optional
-from user.utils import regex_patterns
+from usermodule.utils import regex_patterns
 import secrets
 
 

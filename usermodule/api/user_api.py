@@ -5,10 +5,10 @@
 @Desc    : None
 """
 from fastapi import APIRouter
-from
-from user.models.user import User
+# from
+from usermodule.models.user import User, insert
 
-user_router = APIRouter
+user_router = APIRouter()
 
 
 @user_router.post("/register", tags=["用户"], summary="用户注册")
@@ -20,8 +20,8 @@ async def register(username: str, password: str, code: int):
     # 检查用户是否已经存在
 
     # 检查code是否正确
-
-    return
+    insert(username, password)
+    return True
 
 
 @user_router.post("/login", tags=["用户"], summary="用户登录")

@@ -4,7 +4,7 @@
 @Author  :  zhaowanpeng
 @Desc    :  方便开发的基础模型
 """
-from sqlmodel import SQLModel, Field, Column, TIMESTAMP
+from sqlmodel import SQLModel, Field, Column, DateTime
 from typing import Optional
 from datetime import datetime
 
@@ -13,7 +13,7 @@ class IntIDBaseModel(SQLModel):
     id: Optional[int] = Field(default=None, primary_key=True)
     created_at: datetime = Field(default=datetime.now())
     updated_at: Optional[datetime] = Field(sa_column=Column(
-        TIMESTAMP,
+        DateTime,
         nullable=True,
         default=None,
         onupdate=datetime.now()

@@ -1,6 +1,12 @@
 from fastapi import FastAPI
-from user import user_router
+from sqlmodel import SQLModel
+SQLModel.mysqlurl = "mysql+pymysql://root:1230@localhost/database1"
+import usermodule
+# from usermodule import router
+
 
 app = FastAPI()
 
-app.include_router(user_router, prefix="/api")
+
+
+app.include_router(usermodule.router, prefix="/api")

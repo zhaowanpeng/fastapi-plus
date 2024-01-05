@@ -40,9 +40,9 @@ def create_tables():
 
 # def create():
 #     with Session(engine) as session:
-#         user = User(name="zhaowanpeng")
+#         usermodule = User(name="zhaowanpeng")
 #         user_info = UserInfo(age=26,user_id=1)
-#         # user.user_info = user_info
+#         # usermodule.user_info = user_info
 #         session.add(user_info)
 #         session.commit()
 

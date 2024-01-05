@@ -35,7 +35,7 @@ def create_row():
         print(user.id)
         session.add(user)
         session.commit()
-        # session.refresh(user)
+        # session.refresh(usermodule)
         print(user.id)
         user_info = UserInfo1(age=100,user_id=user.id)
         session.add(user_info)
@@ -43,9 +43,9 @@ def create_row():
 
 # def create():
 #     with Session(engine) as session:
-#         user = User(name="zhaowanpeng")
+#         usermodule = User(name="zhaowanpeng")
         # user_info = UserInfo(age=26,user_id=1)
-        # # user.user_info = user_info
+        # # usermodule.user_info = user_info
         # session.add(user_info)
         # session.commit()
 
@@ -57,11 +57,11 @@ if __name__ == '__main__':
     #     u = session.get(User,(1,"zhaowanpeng"))
     #     print(u)
     # create_tables()
-    # user = User(id=1, name="zhaowanpeng")
-    # user.create(engine)
+    # usermodule = User(id=1, name="zhaowanpeng")
+    # usermodule.create(engine)
     # create()
 
     # crud = CRUD()
-    # user = User(name="zhaowanpeng")
-    # print(user.model_dump())
-    # print(user.)
+    # usermodule = User(name="zhaowanpeng")
+    # print(usermodule.model_dump())
+    # print(usermodule.)
