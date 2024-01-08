@@ -12,7 +12,6 @@ from models import Users, User_Pydantic, UserIn_Pydantic, UserOut_Pydantic
 from pydantic import BaseModel
 from starlette.exceptions import HTTPException
 
-
 # print("UserIn_Pydantic",UserIn_Pydantic)
 
 from tortoise.contrib.fastapi import register_tortoise
@@ -28,17 +27,32 @@ class Status(BaseModel):
 async def get_users():
     return await UserOut_Pydantic.from_queryset(Users.all())
 
+
 @app.post("/users", response_model=UserOut_Pydantic)
 async def create_user(user: UserIn_Pydantic):
     # print(dict(**user))
     # print(dict(**user.model_dump(exclude_unset=True)))
     user_obj = await Users.create(**user.model_dump(exclude_unset=True))
     return await UserOut_Pydantic.from_tortoise_orm(user_obj)
-# #
-# #
-# @app.get("/user/{user_id}", response_model=User_Pydantic)
-# async def get_user(user_id: int):
-#     return await User_Pydantic.from_queryset_single(Users.get(id=user_id))
+
+
+@app.get("/user/{user_id}", response_model=UserOut_Pydantic)
+async def get_user(user_id: int):
+    return await UserOut_Pydantic.from_queryset_single(Users.get(id=user_id))
+
+
+@app.get("/user/haha/{username}", response_model=UserOut_Pydantic)
+async def get_user2(username: str):
+    delete_action = await Users.filter(username=username)
+    print(delete_action)
+    return await UserOut_Pydantic.from_queryset_single(Users.filter(username=username).first())
+
+
+@app.get("/user/{phone}", response_model=UserOut_Pydantic)
+async def get_user3(phone: str):
+    return await UserOut_Pydantic.from_queryset_single(Users.filter(phone=phone))
+
+
 #
 #
 # @app.put("/user/{user_id}", response_model=User_Pydantic)
@@ -65,6 +79,7 @@ async def create_user(user: UserIn_Pydantic):
 
 
 import os
+
 DB_ORM_CONFIG = {
     "connections": {
         "base": {
@@ -92,5 +107,7 @@ register_tortoise(
     add_exception_handlers=True,
 )
 
+# u = Users.filter(username="赵abc123").first()
+# print(u)
 # if __name__ == '__main__':
 #
