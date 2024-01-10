@@ -14,7 +14,7 @@ from user_module.utils import regex_patterns
 class User(IntIDBaseModel):
 
     username = fields.CharField(unique=True, index=True, max_length=20,
-                                validators=[RegexValidator(regex_patterns.username, re.I)])
+                                validators=[RegexValidator(regex_patterns.username, re.I,)])
 
     phone = fields.CharField(null=True, index=True, max_length=11,
                              validators=[RegexValidator(regex_patterns.phone, re.I)])
