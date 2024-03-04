@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="862bc2e3-922a-4b47-a1df-2402a56b2e63" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fastapi-plus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastapi-plus.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_module/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_module/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yy.py" beforeDir="false" afterPath="$PROJECT_DIR$/yy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_module/utils/regex_patterns.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_module/utils/regex_patterns.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +33,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "master"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\pythonproject\fastapi-plus\user_module\utils" />
@@ -148,6 +148,12 @@
       <updated>1704366838385</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="141" y="19" key="SettingsEditor" timestamp="1706021167227">
+      <screen x="0" y="0" width="1280" height="752" />
+    </state>
+    <state x="141" y="19" key="SettingsEditor/0.0.1280.752@0.0.1280.752" timestamp="1706021167227" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
